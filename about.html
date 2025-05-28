@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Site</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1><a href="index.html">Test Site</a></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="images.html">Images</a></li>
+          <li><a href="infos.html">Infos</a></li>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="about">
+      <h2>What's the test?</h2>
+      <p>The <strong>Test</strong> means a procedure intended to establish the quality, perfomance, or reliabilty of something, especially before it is taken into widespread use.</p>
+
+      <p>How the test proceeds:</p>
+      <p>This is how typically proceeds,</p>
+      <ul>
+        <li>Reviewing Instruction and Test Overview</li>
+        <li>Answering Questions</li>
+        <li>Time Management</li>
+        <li>Submitting Responses</li>
+        <li>Result and Feedback</li>
+      </ul>
+
+      <p>When the test needs:</p>
+      <ul>
+        <li>Software Development</li>
+        <li>Machine Development</li>
+        <li>New Product Development</li>
+      </ul>
+    </section>
+
+    <section class="comments">
+  <h2>Test Comment Section</h2>
+  <form id="commentForm">
+    <label for="username">Name:</label><br />
+    <input type="text" id="username" name="username" required /><br /><br />
+    
+    <label for="comment">Comment:</label><br />
+    <textarea id="comment" name="comment" rows="4" required></textarea><br /><br />
+    
+    <button type="submit">Submit</button>
+  </form>
+
+  <ul id="commentList"></ul>
+</section>
+
+<script>
+  document.getElementById("commentForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const username = document.getElementById("username").value.trim();
+    const comment = document.getElementById("comment").value.trim();
+
+    if (username && comment) {
+      const li = document.createElement("li");
+      li.innerHTML = `
+        <strong>${username}</strong>: ${comment}
+        <button class="delete-btn">삭제</button>
+      `;
+
+      // 삭제 버튼 기능 추가
+      li.querySelector(".delete-btn").addEventListener("click", function () {
+        li.remove();
+      });
+
+      document.getElementById("commentList").appendChild(li);
+      document.getElementById("commentForm").reset();
+    }
+  });
+</script>
+
+  </main>
+
+  <footer>
+    <p>Test footer</p>
+  </footer>
+</body>
+</html>

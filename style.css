@@ -1,0 +1,191 @@
+@charset "utf-8";
+
+/* 기본 설정 */
+body {
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #f0f0f0;
+  color: #003366;
+}
+
+/* 컨테이너 */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* 헤더 */
+header {
+  background-color: #003366;
+  color: white;
+  padding: 20px 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+header h1 a {
+  color: white;
+  text-decoration: none;
+}
+
+header h1 a:hover {
+  text-decoration: underline;
+}
+
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* 메인 히어로 섹션 */
+.hero {
+  background-color: #e6f2ff;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.hero h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* 푸터 */
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+
+/* 댓글 섹션 */
+.comments {
+  margin-top: 40px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.comments h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.comments form input,
+.comments form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-family: inherit;
+}
+
+.comments form button {
+  background-color: #003366;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.comments form button:hover {
+  background-color: #0055aa;
+}
+
+#commentList {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+#commentList li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* 삭제 버튼 */
+.delete-btn {
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.delete-btn:hover {
+  background-color: #990000;
+}
+
+/* 이미지 갤러리 */
+.gallery {
+  margin-top: 40px;
+}
+
+.gallery h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-grid img:hover {
+  transform: scale(1.05);
+}
+
+.button-link {
+  width: 100%;
+  text-align: left;
+  padding: 12px 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #e6f2ff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-link:hover {
+  background-color: #d0e7ff;
+}
